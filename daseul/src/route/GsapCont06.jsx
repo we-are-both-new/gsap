@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import gsap from "gsap";
-// import { ScrollTrigger } from "gsap/ScrollTrigger";
 import SplitType from "split-type";
 
 const GsapCont06 = () => {
@@ -30,7 +29,7 @@ const GsapCont06 = () => {
                     trigger: lines,
                     start: "top bottom",
                     end: "+=400",
-                    markers: true,
+                    markers: false,
                     // scrub: 1,
                 },
             });

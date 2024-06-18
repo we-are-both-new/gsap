@@ -6,12 +6,12 @@ gsap.registerPlugin(ScrollTrigger);
 
 const GsapCont08 = () => {
     useEffect(() => {
-        gsap.to("progress", {
+        gsap.to(".parallax__progress_08 progress", {
             value: 100,
             ease: "none",
             scrollTrigger: { scrub: 0.3 },
         });
-    });
+    }, []);
     return (
         <div>
             <div className="parallax__progress_08">

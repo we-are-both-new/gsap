@@ -1,34 +1,38 @@
-import React, { useEffect } from "react";
+import React, { useLayoutEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const GsapCont07 = () => {
-    useEffect(() => {
-        gsap.utils.toArray(".parallax__item").forEach((item) => {
-            let color = item.getAttribute("data-bgcolor");
+    useLayoutEffect(() => {
+        const ctx = gsap.context(() => {
+            gsap.utils.toArray("#parallax__cont_07 .parallax__item").forEach((item) => {
+                let color = item.getAttribute("data-bgcolor");
 
-            ScrollTrigger.create({
-                trigger: item,
-                top: "top 50%",
-                bottom: "bototm 50%",
-                markers: true,
-                onEnter: () => {
-                    gsap.to("body", {
-                        backgroundColor: color,
-                        duration: 1.4,
-                    });
-                },
-                onEnterBack: () => {
-                    gsap.to("body", {
-                        backgroundColor: color,
-                        duration: 1.4,
-                    });
-                },
+                ScrollTrigger.create({
+                    trigger: item,
+                    top: "top 50%",
+                    bottom: "bototm 50%",
+                    markers: false,
+                    onEnter: () => {
+                        gsap.to("body", {
+                            backgroundColor: color,
+                            duration: 1.4,
+                        });
+                    },
+                    onEnterBack: () => {
+                        gsap.to("body", {
+                            backgroundColor: color,
+                            duration: 1.4,
+                        });
+                    },
+                });
             });
         });
-    });
+        return () => ctx.revert();
+    }, []);
+
     return (
         <div>
             <main id="parallax__cont_07">

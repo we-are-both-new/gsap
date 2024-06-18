@@ -248,7 +248,7 @@ const GsapCont02 = () => {
             scrub: true,
             pin: true,
             anticipatePin: 1, // pin을 자연스럽게 만들어줌
-            markers: true,
+            markers: false,
             id: "section7",
         });
 

@@ -1,21 +1,19 @@
-import React, { useEffect } from "react";
+import React from "react";
 import Lenis from "@studio-freight/lenis";
 
 const Gsapcont15 = () => {
-    useEffect(() => {
-        const lenis = new Lenis();
+    const lenis = new Lenis();
 
-        lenis.on("scroll", (e) => {
-            console.log(e);
-        });
+    // lenis.on("scroll", (e) => {
+    //     console.log(e);
+    // });
 
-        function raf(time) {
-            lenis.raf(time);
-            requestAnimationFrame(raf);
-        }
-
+    function raf(time) {
+        lenis.raf(time);
         requestAnimationFrame(raf);
-    });
+    }
+
+    requestAnimationFrame(raf);
     return (
         <div>
             <main id="parallax__cont_15">

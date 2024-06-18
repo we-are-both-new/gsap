@@ -131,7 +131,7 @@ function GsapCont01() {
                 start: "top center",
                 end: "bottom top",
                 scrub: 1, // true , 1 , 2
-                markers: true,
+                markers: false,
                 id: "el8",
                 onEnter: () => {
                     console.log("onEnter");

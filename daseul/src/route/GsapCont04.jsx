@@ -15,7 +15,7 @@ const GsapCont04 = () => {
                     trigger: item,
                     start: "top bottom",
                     end: "bottom top",
-                    markers: true,
+                    markers: false,
                     scrub: 0.5,
                 },
             });
