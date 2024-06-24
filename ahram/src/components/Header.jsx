@@ -1,7 +1,6 @@
 /* eslint-disable no-unused-vars */
 import React from "react";
 import { NavLink, useLocation } from "react-router-dom";
-import "./header.css";
 
 const navLink = [
   { url: "/", num: "1", title: "애니메이션 기본 효과" },

@@ -1,6 +1,5 @@
 /* eslint-disable no-unused-vars */
 import React, { useEffect } from "react";
-import "./gsap03.css";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -8,36 +7,42 @@ gsap.registerPlugin(ScrollTrigger);
 
 export default function Gsap03() {
   useEffect(() => {
-    let panels = gsap.utils.toArray(".parallax__item");
-    let tops = panels.map((panel) =>
-      ScrollTrigger.create({ trigger: panel, start: "top top" })
-    );
+    let ctx = gsap.context(() => {
+      let panels = gsap.utils.toArray(".parallax__item");
+      let tops = panels.map((panel) =>
+        ScrollTrigger.create({ trigger: panel, start: "top top" })
+      );
 
-    panels.forEach((panel, i) => {
+      panels.forEach((panel, i) => {
+        ScrollTrigger.create({
+          trigger: panel,
+          start: () =>
+            panel.offsetHeight < window.innerHeight
+              ? "top top"
+              : "bottom bottom",
+          pin: true,
+          pinSpacing: false,
+        });
+      });
+
       ScrollTrigger.create({
-        trigger: panel,
-        start: () =>
-          panel.offsetHeight < window.innerHeight ? "top top" : "bottom bottom",
-        pin: true,
-        pinSpacing: false,
+        snap: {
+          snapTo: (progress, self) => {
+            let panelStarts = tops.map((st) => st.start),
+              snapScroll = gsap.utils.snap(panelStarts, self.scroll());
+            return gsap.utils.normalize(
+              0,
+              ScrollTrigger.maxScroll(window),
+              snapScroll
+            );
+          },
+          duration: 0.5,
+        },
       });
     });
 
-    ScrollTrigger.create({
-      snap: {
-        snapTo: (progress, self) => {
-          let panelStarts = tops.map((st) => st.start),
-            snapScroll = gsap.utils.snap(panelStarts, self.scroll());
-          return gsap.utils.normalize(
-            0,
-            ScrollTrigger.maxScroll(window),
-            snapScroll
-          );
-        },
-        duration: 0.5,
-      },
-    });
-  });
+    return () => ctx.revert();
+  }, []);
 
   return (
     <main id="parallax__cont_3">

@@ -1,6 +1,5 @@
 /* eslint-disable no-unused-vars */
-import React, { useEffect } from "react";
-import "./gsap13.css";
+import React, { useLayoutEffect } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -9,28 +8,31 @@ gsap.registerPlugin(ScrollTrigger);
 export default function Gsap13() {
   const horizontal = document.querySelector("#horizontal");
   const sections = gsap.utils.toArray("#horizontal > section");
-  console.log(sections);
 
-  useEffect(() => {
-    gsap.to(sections, {
-      xPercent: -100 * (sections.length - 1),
-      ease: "none",
-      scrollTrigger: {
-        trigger: horizontal,
-        start: "top top",
-        end: () => "+=" + (sections.length - 1) + "00%",
-        pin: true,
-        scrub: 1,
-        snap: {
-          snapTo: 1 / (sections.length - 1),
-          inertia: false,
-          duration: { min: 0.1, max: 0.1 },
+  useLayoutEffect(() => {
+    let ctx = gsap.context(() => {
+      gsap.to(sections, {
+        xPercent: -100 * (sections.length - 1),
+        ease: "none",
+        scrollTrigger: {
+          trigger: horizontal,
+          start: "top top",
+          end: () => "+=" + (sections.length - 1) + "00%",
+          pin: true,
+          scrub: 1,
+          snap: {
+            snapTo: 1 / (sections.length - 1),
+            inertia: false,
+            duration: { min: 0.1, max: 0.1 },
+          },
+          invalidateOnRefresh: true,
+          anticipatePin: 1,
         },
-        invalidateOnRefresh: true,
-        anticipatePin: 1,
-      },
+      });
     });
-  });
+
+    return () => ctx.revert();
+  }, []);
 
   return (
     <main id="parallax__cont_13">

@@ -1,6 +1,5 @@
 /* eslint-disable no-unused-vars */
 import React, { useEffect } from "react";
-import "./gsap09.css";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -15,30 +14,34 @@ function setActive(link) {
 
 export default function Gsap09() {
   useEffect(() => {
-    links.forEach((link) => {
-      let element = document.querySelector(link.getAttribute("href"));
-      let linkST = ScrollTrigger.create({
-        trigger: element,
-        start: "top top",
-      });
+    let ctx = gsap.context(() => {
+      links.forEach((link) => {
+        let element = document.querySelector(link.getAttribute("href"));
+        let linkST = ScrollTrigger.create({
+          trigger: element,
+          start: "top top",
+        });
 
-      ScrollTrigger.create({
-        trigger: element,
-        start: "top center",
-        end: "bottom center",
-        onToggle: (self) => setActive(link),
-      });
+        ScrollTrigger.create({
+          trigger: element,
+          start: "top center",
+          end: "bottom center",
+          onToggle: (self) => setActive(link),
+        });
 
-      link.addEventListener("click", (e) => {
-        e.preventDefault();
-        gsap.to(window, {
-          duration: 1,
-          scrollTo: linkST.start,
-          overwrite: "auto",
+        link.addEventListener("click", (e) => {
+          e.preventDefault();
+          gsap.to(window, {
+            duration: 1,
+            scrollTo: linkST.start,
+            overwrite: "auto",
+          });
         });
       });
     });
-  });
+
+    return () => ctx.revert();
+  }, []);
 
   return (
     <>

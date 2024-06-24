@@ -1,6 +1,5 @@
 /* eslint-disable no-unused-vars */
-import React, { useEffect } from "react";
-import "./gsap11.css";
+import React, { useLayoutEffect } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -14,47 +13,51 @@ function setActive(link) {
 }
 
 export default function Gsap11() {
-  useEffect(() => {
-    links.forEach((link) => {
-      let element = document.querySelector(link.getAttribute("href"));
-      let linkST = ScrollTrigger.create({
-        trigger: element,
-        start: "top top",
-      });
+  useLayoutEffect(() => {
+    let ctx = gsap.context(() => {
+      links.forEach((link) => {
+        let element = document.querySelector(link.getAttribute("href"));
+        let linkST = ScrollTrigger.create({
+          trigger: element,
+          start: "top top",
+        });
 
-      ScrollTrigger.create({
-        trigger: element,
-        start: "top center",
-        end: "bottom center",
-        onToggle: (self) => setActive(link),
-      });
+        ScrollTrigger.create({
+          trigger: element,
+          start: "top center",
+          end: "bottom center",
+          onToggle: (self) => setActive(link),
+        });
 
-      link.addEventListener("click", (e) => {
-        e.preventDefault();
-        gsap.to(window, {
-          duration: 1,
-          scrollTo: linkST.start,
-          overwrite: "auto",
+        link.addEventListener("click", (e) => {
+          e.preventDefault();
+          gsap.to(window, {
+            duration: 1,
+            scrollTo: linkST.start,
+            overwrite: "auto",
+          });
         });
       });
+
+      const showNav = gsap
+        .from("#parallax__nav_11", {
+          yPercent: -200,
+          paused: true,
+          duration: 0.2,
+        })
+        .progress(1);
+
+      ScrollTrigger.create({
+        start: "top top",
+        end: 99999,
+        onUpdate: (self) => {
+          self.direction === -1 ? showNav.play() : showNav.reverse();
+        },
+      });
     });
 
-    const showNav = gsap
-      .from("#parallax__nav_11", {
-        yPercent: -200,
-        paused: true,
-        duration: 0.2,
-      })
-      .progress(1);
-
-    ScrollTrigger.create({
-      start: "top top",
-      end: 99999,
-      onUpdate: (self) => {
-        self.direction === -1 ? showNav.play() : showNav.reverse();
-      },
-    });
-  });
+    return () => ctx.revert();
+  }, []);
 
   return (
     <>

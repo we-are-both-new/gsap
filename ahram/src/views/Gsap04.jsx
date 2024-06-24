@@ -1,6 +1,5 @@
 /* eslint-disable no-unused-vars */
 import React, { useEffect } from "react";
-import "./gsap04.css";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 

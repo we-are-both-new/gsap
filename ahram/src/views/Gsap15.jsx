@@ -1,7 +1,6 @@
 /* eslint-disable no-unused-vars */
 import React, { useEffect } from "react";
 import Lenis from "@studio-freight/lenis";
-import "./gsap15.css";
 
 export default function Gsap15() {
   useEffect(() => {

@@ -1,35 +1,39 @@
 /* eslint-disable no-unused-vars */
-import React, { useEffect } from "react";
-import "./gsap07.css";
+import React, { useLayoutEffect } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Gsap07() {
-  useEffect(() => {
-    gsap.utils.toArray(".parallax__item").forEach((item) => {
-      let color = item.getAttribute("data-bgcolor");
+  useLayoutEffect(() => {
+    let ctx = gsap.context(() => {
+      gsap.utils.toArray(".parallax__item").forEach((item) => {
+        let color = item.getAttribute("data-bgcolor");
 
-      ScrollTrigger.create({
-        trigger: item,
-        start: "top 50%",
-        end: "bottom 50%",
-        markers: true,
+        ScrollTrigger.create({
+          trigger: item,
+          start: "top 50%",
+          end: "bottom 50%",
+          markers: true,
 
-        onEnter: () =>
-          gsap.to("body", {
-            backgroundColor: color,
-            duration: 1.4,
-          }),
-        onEnterBack: () =>
-          gsap.to("body", {
-            backgroundColor: color,
-            duration: 1.4,
-          }),
+          onEnter: () =>
+            gsap.to("body", {
+              backgroundColor: color,
+              duration: 1.4,
+            }),
+          onEnterBack: () =>
+            gsap.to("body", {
+              backgroundColor: color,
+              duration: 1.4,
+            }),
+        });
       });
     });
-  });
+
+    return () => ctx.revert();
+  }, []);
+
   return (
     <main id="parallax__cont_7">
       <section id="section1" className="parallax__item" data-bgcolor="#111111">

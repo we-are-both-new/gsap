@@ -1,6 +1,5 @@
 /* eslint-disable no-unused-vars */
-import React, { useEffect } from "react";
-import "./gsap10.css";
+import React, { useLayoutEffect } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -14,40 +13,44 @@ function setActive(link) {
 }
 
 export default function Gsap10() {
-  useEffect(() => {
-    links.forEach((link) => {
-      let element = document.querySelector(link.getAttribute("href"));
-      let linkST = ScrollTrigger.create({
-        trigger: element,
-        start: "top top",
+  useLayoutEffect(() => {
+    let ctx = gsap.context(() => {
+      links.forEach((link) => {
+        let element = document.querySelector(link.getAttribute("href"));
+        let linkST = ScrollTrigger.create({
+          trigger: element,
+          start: "top top",
+        });
+
+        ScrollTrigger.create({
+          trigger: element,
+          start: "top center",
+          end: "bottom center",
+          onToggle: (self) => setActive(link),
+        });
+
+        link.addEventListener("click", (e) => {
+          e.preventDefault();
+          gsap.to(window, {
+            duration: 1,
+            scrollTo: linkST.start,
+            overwrite: "auto",
+          });
+        });
       });
 
       ScrollTrigger.create({
-        trigger: element,
-        start: "top center",
-        end: "bottom center",
-        onToggle: (self) => setActive(link),
-      });
-
-      link.addEventListener("click", (e) => {
-        e.preventDefault();
-        gsap.to(window, {
-          duration: 1,
-          scrollTo: linkST.start,
-          overwrite: "auto",
-        });
+        start: "top -80",
+        end: 99999,
+        toggleClass: {
+          className: "is-active",
+          targets: "#parallax__nav_10",
+        },
       });
     });
 
-    ScrollTrigger.create({
-      start: "top -80",
-      end: 99999,
-      toggleClass: {
-        className: "is-active",
-        targets: "#parallax__nav_10",
-      },
-    });
-  });
+    return () => ctx.revert();
+  }, []);
 
   return (
     <>

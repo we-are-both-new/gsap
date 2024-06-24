@@ -1,6 +1,5 @@
 /* eslint-disable no-unused-vars */
 import React, { useEffect } from "react";
-import "./gsap06.css";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import SplitType from "split-type";
@@ -34,7 +33,7 @@ export default function Gsap06() {
         },
       });
     });
-  });
+  }, [targets]);
 
   return (
     <main id="parallax__cont_6">

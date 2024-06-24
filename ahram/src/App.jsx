@@ -18,6 +18,9 @@ import Gsap13 from "./views/Gsap13";
 import Gsap14 from "./views/Gsap14";
 import Gsap15 from "./views/Gsap15";
 
+import "./assets/css/header.css";
+import "./assets/css/style.css";
+
 function App() {
   return (
     <BrowserRouter>

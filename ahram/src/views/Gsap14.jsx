@@ -1,6 +1,5 @@
 /* eslint-disable no-unused-vars */
-import React, { useEffect } from "react";
-import "./gsap14.css";
+import React, { useLayoutEffect } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -10,63 +9,67 @@ export default function Gsap14() {
   const horizontal = document.querySelector("#horizontal");
   const sections = gsap.utils.toArray("#horizontal > section");
 
-  useEffect(() => {
-    let scrollTween = gsap.to(sections, {
-      xPercent: -100 * (sections.length - 1),
-      ease: "none",
-      scrollTrigger: {
-        trigger: horizontal,
-        start: "top top",
-        end: () => "+=" + (sections.length - 1) + "00%",
-        pin: true,
-        anticipatePin: 1,
-        scrub: 1,
-        invalidateOnRefresh: true,
-      },
+  useLayoutEffect(() => {
+    let ctx = gsap.context(() => {
+      const scrollTween = gsap.to(sections, {
+        xPercent: -100 * (sections.length - 1),
+        ease: "none",
+        scrollTrigger: {
+          trigger: horizontal,
+          start: "top top",
+          end: () => "+=" + (sections.length - 1) + "00%",
+          pin: true,
+          anticipatePin: 1,
+          scrub: 1,
+          invalidateOnRefresh: true,
+        },
+      });
+
+      gsap.to(".img4", {
+        y: -200,
+        duration: 2,
+        ease: "elastic",
+        scrollTrigger: {
+          trigger: ".img4",
+          containerAnimation: scrollTween,
+          start: "left center",
+          toggleActions: "play none reverse none",
+          markers: false,
+          id: "img4",
+        },
+      });
+
+      gsap.to(".img5", {
+        rotation: 720,
+        duration: 2,
+        ease: "elastic",
+        scrollTrigger: {
+          trigger: ".img5",
+          containerAnimation: scrollTween,
+          start: "left center",
+          toggleActions: "play none reverse none",
+          markers: false,
+          id: "img5",
+        },
+      });
+
+      gsap.to(".img6", {
+        scale: 0.3,
+        duration: 2,
+        ease: "elastic",
+        scrollTrigger: {
+          trigger: ".img6",
+          containerAnimation: scrollTween,
+          start: "left center",
+          toggleActions: "play none reverse none",
+          markers: false,
+          id: "img6",
+        },
+      });
     });
 
-    gsap.to(".img4", {
-      y: -200,
-      duration: 2,
-      ease: "elastic",
-      scrollTrigger: {
-        trigger: ".img4",
-        containerAnimation: scrollTween,
-        start: "left center",
-        toggleActions: "play none reverse none",
-        markers: false,
-        id: "img4",
-      },
-    });
-
-    gsap.to(".img5", {
-      rotation: 720,
-      duration: 2,
-      ease: "elastic",
-      scrollTrigger: {
-        trigger: ".img5",
-        containerAnimation: scrollTween,
-        start: "left center",
-        toggleActions: "play none reverse none",
-        markers: false,
-        id: "img5",
-      },
-    });
-
-    gsap.to(".img6", {
-      scale: 0.3,
-      duration: 2,
-      ease: "elastic",
-      scrollTrigger: {
-        trigger: ".img6",
-        containerAnimation: scrollTween,
-        start: "left center",
-        toggleActions: "play none reverse none",
-        markers: false,
-        id: "img6",
-      },
-    });
-  });
+    return () => ctx.revert();
+  }, []);
 
   return (
     <main id="parallax__cont_14">

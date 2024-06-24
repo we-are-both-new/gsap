@@ -1,17 +1,14 @@
 /* eslint-disable no-unused-vars */
-import React, { useEffect } from "react";
-import "./gsap12.css";
+import React, { useLayoutEffect } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Gsap12() {
-  const horizontalSections = gsap.utils.toArray(
-    "#parallax__cont_12 .parallax__item"
-  );
+  const horizontalSections = gsap.utils.toArray(".parallax__item");
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     const ctx = gsap.context(() => {
       gsap.to(horizontalSections, {
         xPercent: -100 * (horizontalSections.length - 1),

@@ -6,6 +6,9 @@ a {
   color: #fff;
   text-decoration: none;
 }
+#root {
+  overflow-y: hidden;
+}
 body {
   color: #fff;
   font-family: "NexonLv1Gothic";

@@ -1,0 +1,1521 @@
+/* gsap01 */
+#parallax__cont_1 {
+  overflow: hidden;
+}
+#parallax__cont_1 .parallax__item {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#parallax__cont_1 .parallax__item:nth-child(2n) {
+  background-color: #222;
+}
+#parallax__cont_1 .parallax__item__num {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  font-size: 5vw;
+  line-height: 1;
+}
+#parallax__cont_1 .parallax__item__img {
+  width: 10vw;
+  height: 10vw;
+  background-color: #fff;
+  background-size: cover;
+  background-position: center;
+}
+#parallax__cont_1 .parallax__item:nth-child(1) .parallax__item__img {
+  background-image: url(./imgs/images14.jpg);
+}
+#parallax__cont_1 .parallax__item:nth-child(2) .parallax__item__img {
+  background-image: url(./imgs/images15.jpg);
+}
+#parallax__cont_1 .parallax__item:nth-child(3) .parallax__item__img {
+  background-image: url(./imgs/images03.jpg);
+}
+#parallax__cont_1 .parallax__item:nth-child(4) .parallax__item__img {
+  background-image: url(./imgs/images04.jpg);
+}
+#parallax__cont_1 .parallax__item:nth-child(5) .parallax__item__img {
+  background-image: url(./imgs/images05.jpg);
+}
+#parallax__cont_1 .parallax__item:nth-child(6) .parallax__item__img {
+  background-image: url(./imgs/images06.jpg);
+}
+#parallax__cont_1 .parallax__item:nth-child(7) .parallax__item__img {
+  background-image: url(./imgs/images07.jpg);
+}
+#parallax__cont_1 .parallax__item:nth-child(8) .parallax__item__img {
+  background-image: url(./imgs/images08.jpg);
+}
+#parallax__cont_1 .parallax__item:nth-child(9) .parallax__item__img {
+  background-image: url(./imgs/images09.jpg);
+}
+#parallax__cont_1 .parallax__item__img.active {
+  filter: hue-rotate(100deg);
+}
+
+/* gsap02 */
+#parallax__cont_2 {
+  overflow: hidden;
+}
+#parallax__cont_2 .parallax__item {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#parallax__cont_2 #section2,
+#parallax__cont_2 #section4,
+#parallax__cont_2 #section6,
+#parallax__cont_2 #section8 {
+  background-color: #222;
+}
+#parallax__cont_2 .parallax__item__num {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  font-size: 5vw;
+  line-height: 1;
+}
+#parallax__cont_2 .parallax__item__img {
+  width: 10vw;
+  height: 10vw;
+  margin: 1vw;
+  background-color: #fff;
+  background-size: cover;
+  background-position: center;
+}
+#parallax__cont_2 #section1 .parallax__item__img {
+  background-image: url(./imgs/images14.jpg);
+}
+#parallax__cont_2 #section2 .parallax__item__img {
+  background-image: url(./imgs/images15.jpg);
+}
+#parallax__cont_2 #section3 .parallax__item__img {
+  background-image: url(./imgs/images03.jpg);
+}
+#parallax__cont_2 #section4 .parallax__item__img {
+  background-image: url(./imgs/images04.jpg);
+}
+#parallax__cont_2 #section5 .parallax__item__img {
+  background-image: url(./imgs/images05.jpg);
+}
+#parallax__cont_2 #section6 .parallax__item__img {
+  background-image: url(./imgs/images06.jpg);
+}
+#parallax__cont_2 #section7 .parallax__item__img {
+  background-image: url(./imgs/images07.jpg);
+}
+#parallax__cont_2 #section8 .parallax__item__img {
+  background-image: url(./imgs/images08.jpg);
+}
+#parallax__cont_2 #section9 .parallax__item__img {
+  background-image: url(./imgs/images09.jpg);
+}
+#parallax__cont_2 #section3 .parallax__item__img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+}
+#parallax__cont_2 #section5 {
+  flex-direction: column;
+}
+#parallax__cont_2 #section5 .parallax__item__text,
+#parallax__cont_2 #section6 .parallax__item__text {
+  font-size: 5vw;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+#parallax__cont_2 #section7 .parallax__item__text {
+  font-size: 5vw;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #111;
+  padding: 30px;
+  width: 100%;
+  text-align: center;
+}
+#parallax__cont_2 #section8 {
+  flex-direction: column;
+}
+#parallax__cont_2 #section8 .parallax__item__text {
+  font-size: 2vw;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+#parallax__cont_2 #section8 .parallax__item__img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+#parallax__cont_2 #section9 .parallax__item__img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+
+/* gsap03 */
+#parallax__cont_3 {
+  overflow: hidden;
+}
+#parallax__cont_3 .parallax__item {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+#parallax__cont_3 #section2,
+#parallax__cont_3 #section4,
+#parallax__cont_3 #section6,
+#parallax__cont_3 #section8 {
+  background-color: #222;
+}
+#parallax__cont_3 .parallax__item__num {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  font-size: 3vw;
+  line-height: 1;
+  z-index: 10;
+}
+#parallax__cont_3 .parallax__item__img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #fff;
+  background-size: cover;
+  background-position: center;
+}
+#parallax__cont_3 .parallax__item__img::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1;
+}
+#parallax__cont_3 #section1 .parallax__item__img {
+  background-image: url(./imgs/images02@2.jpg);
+}
+#parallax__cont_3 #section2 .parallax__item__img {
+  background-image: url(./imgs/images03@2.jpg);
+}
+#parallax__cont_3 #section3 .parallax__item__img {
+  background-image: url(./imgs/images04@2.jpg);
+}
+#parallax__cont_3 #section4 .parallax__item__img {
+  background-image: url(./imgs/images05@2.jpg);
+}
+#parallax__cont_3 #section5 .parallax__item__img {
+  background-image: url(./imgs/images06@2.jpg);
+}
+#parallax__cont_3 #section6 .parallax__item__img {
+  background-image: url(./imgs/images07@2.jpg);
+}
+#parallax__cont_3 #section7 .parallax__item__img {
+  background-image: url(./imgs/images08@2.jpg);
+}
+#parallax__cont_3 #section8 .parallax__item__img {
+  background-image: url(./imgs/images09@2.jpg);
+}
+#parallax__cont_3 #section9 .parallax__item__img {
+  background-image: url(./imgs/images10@2.jpg);
+}
+#parallax__cont_3 .parallax__item__title {
+  font-size: 5vw;
+  z-index: 100;
+  text-transform: uppercase;
+  display: inline-block;
+}
+
+/* gsap04 */
+#parallax__cont_4 {
+  max-width: 1600px;
+  width: 98%;
+  margin: 0 auto;
+  /* background-color: rgba(255,255,255,0.1); */
+}
+#parallax__cont_4 .parallax__item {
+  width: 1000px;
+  max-width: 70vw;
+  margin: 30vw auto;
+  /* background-color: rgba(255,255,255,0.3); */
+  text-align: left;
+  margin-right: 0;
+  position: relative;
+  padding-top: 15vw;
+}
+#parallax__cont_4 .parallax__item:nth-child(even) {
+  margin-left: 0;
+  text-align: right;
+}
+#parallax__cont_4 .parallax__item__num {
+  font-size: 35vw;
+  position: absolute;
+  left: -5vw;
+  top: -13vw;
+  opacity: 0.07;
+  font-family: "Lato";
+  font-weight: 100;
+}
+#parallax__cont_4 .parallax__item:nth-child(even) .parallax__item__num {
+  left: auto;
+  right: -5vw;
+}
+#parallax__cont_4 .parallax__item__title {
+  padding-bottom: 5px;
+  font-weight: 400;
+}
+#parallax__cont_4 .parallax__item__imgWrap {
+  width: 100%;
+  padding-bottom: 56.25%;
+  background: #000;
+  position: relative;
+  overflow: hidden;
+}
+#parallax__cont_4 .parallax__item__img {
+  position: absolute;
+  left: -5%;
+  top: -5%;
+  width: 110%;
+  height: 110%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  filter: saturate(0%);
+  transition: all 1s;
+}
+#parallax__cont_4 .parallax__item__img:hover {
+  filter: saturate(100%);
+  transform: scale(1.025);
+}
+#parallax__cont_4 #section1 .parallax__item__img {
+  background-image: url(./imgs/images01@2.jpg);
+}
+#parallax__cont_4 #section2 .parallax__item__img {
+  background-image: url(./imgs/images02@2.jpg);
+}
+#parallax__cont_4 #section3 .parallax__item__img {
+  background-image: url(./imgs/images03@2.jpg);
+}
+#parallax__cont_4 #section4 .parallax__item__img {
+  background-image: url(./imgs/images04@2.jpg);
+}
+#parallax__cont_4 #section5 .parallax__item__img {
+  background-image: url(./imgs/images05@2.jpg);
+}
+#parallax__cont_4 #section6 .parallax__item__img {
+  background-image: url(./imgs/images06@2.jpg);
+}
+#parallax__cont_4 #section7 .parallax__item__img {
+  background-image: url(./imgs/images07@2.jpg);
+}
+#parallax__cont_4 #section8 .parallax__item__img {
+  background-image: url(./imgs/images08@2.jpg);
+}
+#parallax__cont_4 #section9 .parallax__item__img {
+  background-image: url(./imgs/images09@2.jpg);
+}
+#parallax__cont_4 .parallax__item__desc {
+  font-size: 4vw;
+  line-height: 1.4;
+  margin-top: -5vw;
+  margin-left: -4vw;
+  z-index: 100;
+  position: relative;
+  word-break: keep-all;
+}
+#parallax__cont_4 .parallax__item:nth-child(even) .parallax__item__desc {
+  margin-left: auto;
+  margin-right: -4vw;
+}
+
+/* gsap05 */
+#parallax__cont_5 {
+  max-width: 1600px;
+  width: 98%;
+  margin: 0 auto;
+  /* background-color: rgba(255,255,255,0.1); */
+}
+#parallax__cont_5 .parallax__item {
+  width: 1000px;
+  max-width: 70vw;
+  margin: 30vw auto;
+  /* background-color: rgba(255,255,255,0.3); */
+  text-align: left;
+  margin-right: 0;
+  position: relative;
+  padding-top: 15vw;
+}
+#parallax__cont_5 .parallax__item:nth-child(even) {
+  margin-left: 0;
+  text-align: right;
+}
+#parallax__cont_5 .parallax__item__num {
+  font-size: 35vw;
+  position: absolute;
+  left: -5vw;
+  top: -13vw;
+  opacity: 0.07;
+  font-family: "Lato";
+  font-weight: 100;
+}
+#parallax__cont_5 .parallax__item:nth-child(even) .parallax__item__num {
+  left: auto;
+  right: -5vw;
+}
+#parallax__cont_5 .parallax__item__title {
+  padding-bottom: 5px;
+  font-weight: 400;
+}
+#parallax__cont_5 .parallax__item__imgWrap {
+  width: 100%;
+  padding-bottom: 56.25%;
+  background: #000;
+  position: relative;
+  overflow: hidden;
+}
+#parallax__cont_5 .parallax__item__img {
+  position: absolute;
+  left: -5%;
+  top: -5%;
+  width: 110%;
+  height: 110%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  filter: saturate(0%);
+  transition: all 1s;
+}
+#parallax__cont_5 .parallax__item__img:hover {
+  filter: saturate(100%);
+  transform: scale(1.025);
+}
+#parallax__cont_5 #section1 .parallax__item__img {
+  background-image: url(./imgs/images01@2.jpg);
+}
+#parallax__cont_5 #section2 .parallax__item__img {
+  background-image: url(./imgs/images02@2.jpg);
+}
+#parallax__cont_5 #section3 .parallax__item__img {
+  background-image: url(./imgs/images03@2.jpg);
+}
+#parallax__cont_5 #section4 .parallax__item__img {
+  background-image: url(./imgs/images04@2.jpg);
+}
+#parallax__cont_5 #section5 .parallax__item__img {
+  background-image: url(./imgs/images05@2.jpg);
+}
+#parallax__cont_5 #section6 .parallax__item__img {
+  background-image: url(./imgs/images06@2.jpg);
+}
+#parallax__cont_5 #section7 .parallax__item__img {
+  background-image: url(./imgs/images07@2.jpg);
+}
+#parallax__cont_5 #section8 .parallax__item__img {
+  background-image: url(./imgs/images08@2.jpg);
+}
+#parallax__cont_5 #section9 .parallax__item__img {
+  background-image: url(./imgs/images09@2.jpg);
+}
+#parallax__cont_5 .parallax__item__desc {
+  font-size: 4vw;
+  line-height: 1.4;
+  margin-top: -5vw;
+  margin-left: -4vw;
+  z-index: 100;
+  position: relative;
+  word-break: keep-all;
+}
+#parallax__cont_5 .parallax__item:nth-child(even) .parallax__item__desc {
+  margin-left: auto;
+  margin-right: -4vw;
+}
+
+/* gsap06 */
+#parallax__cont_6 {
+  max-width: 1600px;
+  width: 98%;
+  margin: 0 auto;
+  /* background-color: rgba(255,255,255,0.1); */
+}
+#parallax__cont_6 .parallax__item {
+  width: 1000px;
+  max-width: 70vw;
+  margin: 30vw auto;
+  /* background-color: rgba(255,255,255,0.3); */
+  text-align: left;
+  margin-right: 0;
+  position: relative;
+  padding-top: 15vw;
+}
+#parallax__cont_6 .parallax__item:nth-child(even) {
+  margin-left: 0;
+  text-align: right;
+}
+#parallax__cont_6 .parallax__item__num {
+  font-size: 35vw;
+  position: absolute;
+  left: -5vw;
+  top: -13vw;
+  opacity: 0.07;
+  font-family: "Lato";
+  font-weight: 100;
+}
+#parallax__cont_6 .parallax__item:nth-child(even) .parallax__item__num {
+  left: auto;
+  right: -5vw;
+}
+#parallax__cont_6 .parallax__item__title {
+  padding-bottom: 5px;
+  font-weight: 400;
+}
+#parallax__cont_6 .parallax__item__imgWrap {
+  width: 100%;
+  padding-bottom: 56.25%;
+  background: #000;
+  position: relative;
+  overflow: hidden;
+}
+#parallax__cont_6 .parallax__item__img {
+  position: absolute;
+  left: -5%;
+  top: -5%;
+  width: 110%;
+  height: 110%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  filter: saturate(0%);
+  transition: all 1s;
+}
+#parallax__cont_6 .parallax__item__img:hover {
+  filter: saturate(100%);
+  transform: scale(1.025);
+}
+#parallax__cont_6 #section1 .parallax__item__img {
+  background-image: url(./imgs/images01@2.jpg);
+}
+#parallax__cont_6 #section2 .parallax__item__img {
+  background-image: url(./imgs/images02@2.jpg);
+}
+#parallax__cont_6 #section3 .parallax__item__img {
+  background-image: url(./imgs/images03@2.jpg);
+}
+#parallax__cont_6 #section4 .parallax__item__img {
+  background-image: url(./imgs/images04@2.jpg);
+}
+#parallax__cont_6 #section5 .parallax__item__img {
+  background-image: url(./imgs/images05@2.jpg);
+}
+#parallax__cont_6 #section6 .parallax__item__img {
+  background-image: url(./imgs/images06@2.jpg);
+}
+#parallax__cont_6 #section7 .parallax__item__img {
+  background-image: url(./imgs/images07@2.jpg);
+}
+#parallax__cont_6 #section8 .parallax__item__img {
+  background-image: url(./imgs/images08@2.jpg);
+}
+#parallax__cont_6 #section9 .parallax__item__img {
+  background-image: url(./imgs/images09@2.jpg);
+}
+#parallax__cont_6 .parallax__item__desc {
+  font-size: 4vw;
+  line-height: 1.4;
+  margin-top: -5vw;
+  margin-left: -4vw;
+  z-index: 100;
+  position: relative;
+}
+#parallax__cont_6 .parallax__item:nth-child(even) .parallax__item__desc {
+  margin-left: auto;
+  margin-right: -4vw;
+}
+#parallax__cont_6 .split > span {
+  display: inline-block;
+}
+
+/* gsap07 */
+#parallax__cont_7 {
+  width: 100%;
+}
+#parallax__cont_7 .parallax__item {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+#parallax__cont_7 .parallax__item__num {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  font-size: 1vw;
+}
+#parallax__cont_7 .parallax__item__imgWrap {
+  width: 50%;
+  margin-right: 30%;
+  padding-bottom: 26.25%;
+  background: #000;
+  position: relative;
+  overflow: hidden;
+}
+#parallax__cont_7 .parallax__item__img {
+  position: absolute;
+  left: -5%;
+  top: -5%;
+  width: 110%;
+  height: 110%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  filter: saturate(0%);
+  transition: all 1s;
+}
+#parallax__cont_7 .parallax__item__img:hover {
+  filter: saturate(100%);
+  transform: scale(1.025);
+}
+#parallax__cont_7 .parallax__item__desc {
+  font-size: 3vw;
+  line-height: 1.4;
+  margin-top: 10vw;
+  margin-left: -4vw;
+  margin-right: 2vw;
+  z-index: 100;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  word-break: keep-all;
+}
+
+#parallax__cont_7 #section1 .parallax__item__img {
+  background-image: url(./imgs/images01@2.jpg);
+}
+#parallax__cont_7 #section2 .parallax__item__img {
+  background-image: url(./imgs/images02@2.jpg);
+}
+#parallax__cont_7 #section3 .parallax__item__img {
+  background-image: url(./imgs/images03@2.jpg);
+}
+#parallax__cont_7 #section4 .parallax__item__img {
+  background-image: url(./imgs/images04@2.jpg);
+}
+#parallax__cont_7 #section5 .parallax__item__img {
+  background-image: url(./imgs/images05@2.jpg);
+}
+#parallax__cont_7 #section6 .parallax__item__img {
+  background-image: url(./imgs/images06@2.jpg);
+}
+#parallax__cont_7 #section7 .parallax__item__img {
+  background-image: url(./imgs/images07@2.jpg);
+}
+#parallax__cont_7 #section8 .parallax__item__img {
+  background-image: url(./imgs/images08@2.jpg);
+}
+#parallax__cont_7 #section9 .parallax__item__img {
+  background-image: url(./imgs/images09@2.jpg);
+}
+
+/* gsap08 */
+#parallax__cont_08 {
+  max-width: 1600px;
+  width: 98%;
+  margin: 0 auto;
+  /* background-color: rgba(255,255,255,0.1); */
+}
+#parallax__cont_08 .parallax__item {
+  width: 1000px;
+  max-width: 70vw;
+  margin: 30vw auto;
+  /* background-color: rgba(255,255,255,0.3); */
+  text-align: left;
+  margin-right: 0;
+  position: relative;
+  padding-top: 15vw;
+}
+#parallax__cont_08 .parallax__item:nth-child(even) {
+  margin-left: 0;
+  text-align: right;
+}
+#parallax__cont_08 .parallax__item__num {
+  font-size: 35vw;
+  position: absolute;
+  left: -5vw;
+  top: -13vw;
+  opacity: 0.07;
+  font-family: "Lato";
+  font-weight: 100;
+}
+#parallax__cont_08 .parallax__item:nth-child(even) .parallax__item__num {
+  left: auto;
+  right: -5vw;
+}
+#parallax__cont_08 .parallax__item__title {
+  padding-bottom: 5px;
+  font-weight: 400;
+}
+#parallax__cont_08 .parallax__item__imgWrap {
+  width: 100%;
+  padding-bottom: 56.25%;
+  background: #000;
+  position: relative;
+  overflow: hidden;
+}
+#parallax__cont_08 .parallax__item__img {
+  position: absolute;
+  left: -5%;
+  top: -5%;
+  width: 110%;
+  height: 110%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  filter: saturate(0%);
+  transition: all 1s;
+}
+#parallax__cont_08 .parallax__item__img:hover {
+  filter: saturate(100%);
+  transform: scale(1.025);
+}
+#parallax__cont_08 #section1 .parallax__item__img {
+  background-image: url(./imgs/images01@2.jpg);
+}
+#parallax__cont_08 #section2 .parallax__item__img {
+  background-image: url(./imgs/images02@2.jpg);
+}
+#parallax__cont_08 #section3 .parallax__item__img {
+  background-image: url(./imgs/images03@2.jpg);
+}
+#parallax__cont_08 #section4 .parallax__item__img {
+  background-image: url(./imgs/images04@2.jpg);
+}
+#parallax__cont_08 #section5 .parallax__item__img {
+  background-image: url(./imgs/images05@2.jpg);
+}
+#parallax__cont_08 #section6 .parallax__item__img {
+  background-image: url(./imgs/images06@2.jpg);
+}
+#parallax__cont_08 #section7 .parallax__item__img {
+  background-image: url(./imgs/images07@2.jpg);
+}
+#parallax__cont_08 #section8 .parallax__item__img {
+  background-image: url(./imgs/images08@2.jpg);
+}
+#parallax__cont_08 #section9 .parallax__item__img {
+  background-image: url(./imgs/images09@2.jpg);
+}
+#parallax__cont_08 .parallax__item__desc {
+  font-size: 4vw;
+  line-height: 1.4;
+  margin-top: -5vw;
+  margin-left: -4vw;
+  z-index: 100;
+  position: relative;
+}
+#parallax__cont_08 .parallax__item:nth-child(even) .parallax__item__desc {
+  margin-left: auto;
+  margin-right: -4vw;
+}
+.parallax__progress progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10000;
+  width: 100%;
+  height: 5px;
+  border: none;
+  background: transparent;
+}
+progress::-webkit-progress-bar {
+  background: transparent;
+}
+progress::-webkit-progress-value {
+  background: linear-gradient(
+    to left,
+    #db38b5,
+    #01b3e3,
+    #25ce7b,
+    #fdc741,
+    #ff6b01,
+    #fc4236
+  );
+  background-attachment: fixed;
+}
+#parallax__cont_08 progress::-moz-progress-value {
+  background: linear-gradient(
+    to left,
+    #db38b5,
+    #01b3e3,
+    #25ce7b,
+    #fdc741,
+    #ff6b01,
+    #fc4236
+  );
+  background-attachment: fixed;
+}
+
+/* gsap09 */
+#parallax__nav_9 {
+  position: fixed;
+  right: 20px;
+  top: 20px;
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 15px 20px;
+  border-radius: 50px;
+}
+#parallax__nav_9 li {
+  list-style: none;
+  display: inline;
+}
+#parallax__nav_9 li a {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  padding: 5px;
+  text-align: center;
+  line-height: 30px;
+}
+#parallax__nav_9 li a.active {
+  background: #fff;
+  color: #000;
+  border-radius: 50%;
+}
+#parallax__cont_9 {
+  max-width: 1600px;
+  width: 98%;
+  margin: 0 auto;
+}
+#parallax__cont_9 .parallax__item {
+  width: 1000px;
+  max-width: 70vw;
+  margin: 30vw auto;
+  text-align: left;
+  margin-right: 0;
+  position: relative;
+  padding-top: 15vw;
+}
+#parallax__cont_9 .parallax__item:nth-child(even) {
+  margin-left: 0;
+  text-align: right;
+}
+#parallax__cont_9 .parallax__item__num {
+  font-size: 35vw;
+  position: absolute;
+  left: -5vw;
+  top: -13vw;
+  opacity: 0.07;
+  font-family: "Lato";
+  font-weight: 100;
+}
+#parallax__cont_9 .parallax__item:nth-child(even) .parallax__item__num {
+  left: auto;
+  right: -5vw;
+}
+#parallax__cont_9 .parallax__item__title {
+  padding-bottom: 5px;
+  font-weight: 400;
+}
+#parallax__cont_9 .parallax__item__imgWrap {
+  width: 100%;
+  padding-bottom: 56.25%;
+  background: #000;
+  position: relative;
+  overflow: hidden;
+}
+#parallax__cont_9 .parallax__item__img {
+  position: absolute;
+  left: -5%;
+  top: -5%;
+  width: 110%;
+  height: 110%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  filter: saturate(0%);
+  transition: all 1s;
+}
+#parallax__cont_9 .parallax__item__img:hover {
+  filter: saturate(100%);
+  transform: scale(1.025);
+}
+#parallax__cont_9 #section1 .parallax__item__img {
+  background-image: url(./imgs/images01@2.jpg);
+}
+#parallax__cont_9 #section2 .parallax__item__img {
+  background-image: url(./imgs/images02@2.jpg);
+}
+#parallax__cont_9 #section3 .parallax__item__img {
+  background-image: url(./imgs/images03@2.jpg);
+}
+#parallax__cont_9 #section4 .parallax__item__img {
+  background-image: url(./imgs/images04@2.jpg);
+}
+#parallax__cont_9 #section5 .parallax__item__img {
+  background-image: url(./imgs/images05@2.jpg);
+}
+#parallax__cont_9 #section6 .parallax__item__img {
+  background-image: url(./imgs/images06@2.jpg);
+}
+#parallax__cont_9 #section7 .parallax__item__img {
+  background-image: url(./imgs/images07@2.jpg);
+}
+#parallax__cont_9 #section8 .parallax__item__img {
+  background-image: url(./imgs/images08@2.jpg);
+}
+#parallax__cont_9 #section9 .parallax__item__img {
+  background-image: url(./imgs/images09@2.jpg);
+}
+#parallax__cont_9 .parallax__item__desc {
+  font-size: 4vw;
+  line-height: 1.4;
+  margin-top: -5vw;
+  margin-left: -4vw;
+  z-index: 100;
+  position: relative;
+}
+#parallax__cont_9 .parallax__item:nth-child(even) .parallax__item__desc {
+  margin-left: auto;
+  margin-right: -4vw;
+}
+
+/* gsap10 */
+#parallax__nav_10 {
+  position: fixed;
+  right: 20px;
+  top: 20px;
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 15px 20px;
+  border-radius: 50px;
+  text-align: center;
+}
+#parallax__nav_10 li {
+  list-style: none;
+  display: inline;
+}
+#parallax__nav_10 li a {
+  display: inline-block;
+  width: 80px;
+  height: 30px;
+  padding: 5px;
+  text-align: center;
+  line-height: 30px;
+  transition: all 0.3s;
+}
+#parallax__nav_10 li a.active {
+  background: #fff;
+  color: #000;
+  border-radius: 30px;
+}
+#parallax__nav_10.is-active li a {
+  width: 30px;
+}
+#parallax__cont_10 {
+  max-width: 1600px;
+  width: 98%;
+  margin: 0 auto;
+}
+#parallax__cont_10 .parallax__item {
+  width: 1000px;
+  max-width: 70vw;
+  margin: 30vw auto;
+  text-align: left;
+  margin-right: 0;
+  position: relative;
+  padding-top: 15vw;
+}
+#parallax__cont_10 .parallax__item:nth-child(even) {
+  margin-left: 0;
+  text-align: right;
+}
+#parallax__cont_10 .parallax__item__num {
+  font-size: 35vw;
+  position: absolute;
+  left: -5vw;
+  top: -13vw;
+  opacity: 0.07;
+  font-family: "Lato";
+  font-weight: 100;
+}
+#parallax__cont_10 .parallax__item:nth-child(even) .parallax__item__num {
+  left: auto;
+  right: -5vw;
+}
+#parallax__cont_10 .parallax__item__title {
+  padding-bottom: 5px;
+  font-weight: 400;
+}
+#parallax__cont_10 .parallax__item__imgWrap {
+  width: 100%;
+  padding-bottom: 56.25%;
+  background: #000;
+  position: relative;
+  overflow: hidden;
+}
+#parallax__cont_10 .parallax__item__img {
+  position: absolute;
+  left: -5%;
+  top: -5%;
+  width: 110%;
+  height: 110%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  filter: saturate(0%);
+  transition: all 1s;
+}
+#parallax__cont_10 .parallax__item__img:hover {
+  filter: saturate(100%);
+  transform: scale(1.025);
+}
+#parallax__cont_10 #section1 .parallax__item__img {
+  background-image: url(./imgs/images01@2.jpg);
+}
+#parallax__cont_10 #section2 .parallax__item__img {
+  background-image: url(./imgs/images02@2.jpg);
+}
+#parallax__cont_10 #section3 .parallax__item__img {
+  background-image: url(./imgs/images03@2.jpg);
+}
+#parallax__cont_10 #section4 .parallax__item__img {
+  background-image: url(./imgs/images04@2.jpg);
+}
+#parallax__cont_10 #section5 .parallax__item__img {
+  background-image: url(./imgs/images05@2.jpg);
+}
+#parallax__cont_10 #section6 .parallax__item__img {
+  background-image: url(./imgs/images06@2.jpg);
+}
+#parallax__cont_10 #section7 .parallax__item__img {
+  background-image: url(./imgs/images07@2.jpg);
+}
+#parallax__cont_10 #section8 .parallax__item__img {
+  background-image: url(./imgs/images08@2.jpg);
+}
+#parallax__cont_10 #section9 .parallax__item__img {
+  background-image: url(./imgs/images09@2.jpg);
+}
+#parallax__cont_10 .parallax__item__desc {
+  font-size: 4vw;
+  line-height: 1.4;
+  margin-top: -5vw;
+  margin-left: -4vw;
+  z-index: 100;
+  position: relative;
+  word-break: keep-all;
+}
+#parallax__cont_10 .parallax__item:nth-child(even) .parallax__item__desc {
+  margin-left: auto;
+  margin-right: -4vw;
+}
+
+/* gsap11 */
+#parallax__nav_11 {
+  position: fixed;
+  right: 20px;
+  top: 20px;
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 15px 20px;
+  border-radius: 50px;
+  text-align: center;
+}
+#parallax__nav_11 li {
+  list-style: none;
+  display: inline;
+}
+#parallax__nav_11 li a {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  padding: 5px;
+  text-align: center;
+  line-height: 30px;
+  transition: all 0.3s;
+}
+#parallax__nav_11 li a.active {
+  background: #fff;
+  color: #000;
+  border-radius: 30px;
+}
+#parallax__cont_11 {
+  max-width: 1600px;
+  width: 98%;
+  margin: 0 auto;
+}
+#parallax__cont_11 .parallax__item {
+  width: 1000px;
+  max-width: 70vw;
+  margin: 30vw auto;
+  text-align: left;
+  margin-right: 0;
+  position: relative;
+  padding-top: 15vw;
+}
+#parallax__cont_11 .parallax__item:nth-child(even) {
+  margin-left: 0;
+  text-align: right;
+}
+#parallax__cont_11 .parallax__item__num {
+  font-size: 35vw;
+  position: absolute;
+  left: -5vw;
+  top: -13vw;
+  opacity: 0.07;
+  font-family: "Lato";
+  font-weight: 100;
+}
+#parallax__cont_11 .parallax__item:nth-child(even) .parallax__item__num {
+  left: auto;
+  right: -5vw;
+}
+#parallax__cont_11 .parallax__item__title {
+  padding-bottom: 5px;
+  font-weight: 400;
+}
+#parallax__cont_11 .parallax__item__imgWrap {
+  width: 100%;
+  padding-bottom: 56.25%;
+  background: #000;
+  position: relative;
+  overflow: hidden;
+}
+#parallax__cont_11 .parallax__item__img {
+  position: absolute;
+  left: -5%;
+  top: -5%;
+  width: 110%;
+  height: 110%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  filter: saturate(0%);
+  transition: all 1s;
+}
+#parallax__cont_11 .parallax__item__img:hover {
+  filter: saturate(100%);
+  transform: scale(1.025);
+}
+#parallax__cont_11 #section1 .parallax__item__img {
+  background-image: url(./imgs/images01@2.jpg);
+}
+#parallax__cont_11 #section2 .parallax__item__img {
+  background-image: url(./imgs/images02@2.jpg);
+}
+#parallax__cont_11 #section3 .parallax__item__img {
+  background-image: url(./imgs/images03@2.jpg);
+}
+#parallax__cont_11 #section4 .parallax__item__img {
+  background-image: url(./imgs/images04@2.jpg);
+}
+#parallax__cont_11 #section5 .parallax__item__img {
+  background-image: url(./imgs/images05@2.jpg);
+}
+#parallax__cont_11 #section6 .parallax__item__img {
+  background-image: url(./imgs/images06@2.jpg);
+}
+#parallax__cont_11 #section7 .parallax__item__img {
+  background-image: url(./imgs/images07@2.jpg);
+}
+#parallax__cont_11 #section8 .parallax__item__img {
+  background-image: url(./imgs/images08@2.jpg);
+}
+#parallax__cont_11 #section9 .parallax__item__img {
+  background-image: url(./imgs/images09@2.jpg);
+}
+#parallax__cont_11 .parallax__item__desc {
+  font-size: 4vw;
+  line-height: 1.4;
+  margin-top: -5vw;
+  margin-left: -4vw;
+  z-index: 100;
+  position: relative;
+  word-break: keep-all;
+}
+#parallax__cont_11 .parallax__item:nth-child(even) .parallax__item__desc {
+  margin-left: auto;
+  margin-right: -4vw;
+}
+
+/* gsap12 */
+#parallax__cont_12 {
+  width: 900%;
+  height: 100vh;
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-y: hidden;
+}
+#parallax__cont_12 .parallax__item {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#parallax__cont_12 .parallax__item__num {
+  font-size: 5vw;
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  font-family: "Lato";
+  font-weight: 100;
+  z-index: 100;
+}
+#parallax__cont_12 .parallax__item__imgWrap {
+  width: 30%;
+  padding-bottom: 18%;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+}
+#parallax__cont_12 .parallax__item__img {
+  position: absolute;
+  left: -5%;
+  top: -5%;
+  width: 110%;
+  height: 110%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  filter: saturate(0%);
+  transition: all 1s;
+}
+#parallax__cont_12 .parallax__item__img:hover {
+  filter: saturate(100%);
+  transform: scale(1.025);
+}
+#parallax__cont_12 #section1 .parallax__item__img {
+  background-image: url(./imgs/images01@2.jpg);
+}
+#parallax__cont_12 #section2 .parallax__item__img {
+  background-image: url(./imgs/images02@2.jpg);
+}
+#parallax__cont_12 #section3 .parallax__item__img {
+  background-image: url(./imgs/images03@2.jpg);
+}
+#parallax__cont_12 #section4 .parallax__item__img {
+  background-image: url(./imgs/images04@2.jpg);
+}
+#parallax__cont_12 #section5 .parallax__item__img {
+  background-image: url(./imgs/images05@2.jpg);
+}
+#parallax__cont_12 #section6 .parallax__item__img {
+  background-image: url(./imgs/images06@2.jpg);
+}
+#parallax__cont_12 #section7 .parallax__item__img {
+  background-image: url(./imgs/images07@2.jpg);
+}
+#parallax__cont_12 #section8 .parallax__item__img {
+  background-image: url(./imgs/images08@2.jpg);
+}
+#parallax__cont_12 #section9 .parallax__item__img {
+  background-image: url(./imgs/images09@2.jpg);
+}
+#parallax__cont_12 #section1,
+#parallax__cont_12 #section3,
+#parallax__cont_12 #section5,
+#parallax__cont_12 #section7,
+#parallax__cont_12 #section9 {
+  background-color: #111;
+}
+#parallax__cont_12 #parallax__cont {
+  overscroll-behavior: none;
+  width: 900%;
+  height: 100vh;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+/* gsap13 */
+#parallax__cont_13 .parallax__item {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#parallax__cont_13 .parallax__item__num {
+  font-size: 5vw;
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  font-family: "Lato";
+  font-weight: 100;
+  z-index: 100;
+}
+#parallax__cont_13 .parallax__item__imgWrap {
+  width: 30%;
+  padding-bottom: 18%;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+}
+#parallax__cont_13 .parallax__item__img {
+  position: absolute;
+  left: -5%;
+  top: -5%;
+  width: 110%;
+  height: 110%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  filter: saturate(0%);
+  transition: all 1s;
+}
+#parallax__cont_13 .parallax__item__img:hover {
+  filter: saturate(100%);
+  transform: scale(1.025);
+}
+#parallax__cont_13 #section1 .parallax__item__img {
+  background-image: url(./imgs/images01@2.jpg);
+}
+#parallax__cont_13 #section2 .parallax__item__img {
+  background-image: url(./imgs/images02@2.jpg);
+}
+#parallax__cont_13 #section3 .parallax__item__img {
+  background-image: url(./imgs/images03@2.jpg);
+}
+#parallax__cont_13 #section4 .parallax__item__img {
+  background-image: url(./imgs/images04@2.jpg);
+}
+#parallax__cont_13 #section5 .parallax__item__img {
+  background-image: url(./imgs/images05@2.jpg);
+}
+#parallax__cont_13 #section6 .parallax__item__img {
+  background-image: url(./imgs/images06@2.jpg);
+}
+#parallax__cont_13 #section7 .parallax__item__img {
+  background-image: url(./imgs/images07@2.jpg);
+}
+#parallax__cont_13 #section8 .parallax__item__img {
+  background-image: url(./imgs/images08@2.jpg);
+}
+#parallax__cont_13 #section9 .parallax__item__img {
+  background-image: url(./imgs/images09@2.jpg);
+}
+#parallax__cont_13 #section1,
+#parallax__cont_13 #section3,
+#parallax__cont_13 #section5,
+#parallax__cont_13 #section7,
+#parallax__cont_13 #section9 {
+  background-color: #111;
+}
+#parallax__cont_13 #parallax__cont {
+  overflow: hidden;
+}
+#parallax__cont_13 #horizontal {
+  display: flex;
+  flex-wrap: nowrap;
+  width: 500%;
+}
+#parallax__cont_13 #horizontal > section {
+  width: 100%;
+}
+
+/* gsap14 */
+#parallax__cont_14 .parallax__item {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#parallax__cont_14 .parallax__item__num {
+  font-size: 5vw;
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  font-family: "Lato";
+  font-weight: 100;
+  z-index: 100;
+}
+#parallax__cont_14 .parallax__item__imgWrap {
+  width: 30%;
+  padding-bottom: 18%;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+}
+#parallax__cont_14 .parallax__item__img {
+  position: absolute;
+  left: -5%;
+  top: -5%;
+  width: 110%;
+  height: 110%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  filter: saturate(0%);
+  transition: all 1s;
+}
+#parallax__cont_14 .parallax__item__img:hover {
+  filter: saturate(100%);
+  transform: scale(1.025);
+}
+#parallax__cont_14 #section1 .parallax__item__img {
+  background-image: url(./imgs/images01@2.jpg);
+}
+#parallax__cont_14 #section2 .parallax__item__img {
+  background-image: url(./imgs/images02@2.jpg);
+}
+#parallax__cont_14 #section3 .parallax__item__img {
+  background-image: url(./imgs/images03@2.jpg);
+}
+#parallax__cont_14 #section4 .parallax__item__img {
+  background-image: url(./imgs/images04@2.jpg);
+}
+#parallax__cont_14 #section5 .parallax__item__img {
+  background-image: url(./imgs/images05@2.jpg);
+}
+#parallax__cont_14 #section6 .parallax__item__img {
+  background-image: url(./imgs/images06@2.jpg);
+}
+#parallax__cont_14 #section7 .parallax__item__img {
+  background-image: url(./imgs/images07@2.jpg);
+}
+#parallax__cont_14 #section8 .parallax__item__img {
+  background-image: url(./imgs/images08@2.jpg);
+}
+#parallax__cont_14 #section9 .parallax__item__img {
+  background-image: url(./imgs/images09@2.jpg);
+}
+#parallax__cont_14 #section1,
+#parallax__cont_14 #section3,
+#parallax__cont_14 #section5,
+#parallax__cont_14 #section7,
+#parallax__cont_14 #section9 {
+  background-color: #111;
+}
+#parallax__cont_14 #parallax__cont {
+  overflow: hidden;
+}
+#parallax__cont_14 #horizontal {
+  display: flex;
+  flex-wrap: nowrap;
+  width: 500%;
+}
+#parallax__cont_14 #horizontal > section {
+  width: 100%;
+}
+
+/* gsap15 */
+#parallax__cont_15 {
+  max-width: 1600px;
+  width: 98%;
+  margin: 0 auto;
+}
+#parallax__cont_15 .parallax__item {
+  width: 1000px;
+  max-width: 70vw;
+  margin: 30vw auto;
+  text-align: left;
+  margin-right: 0;
+  position: relative;
+  padding-top: 15vw;
+}
+#parallax__cont_15 .parallax__item:nth-child(even) {
+  margin-left: 0;
+  text-align: right;
+}
+#parallax__cont_15 .parallax__item__num {
+  font-size: 35vw;
+  position: absolute;
+  left: -5vw;
+  top: -13vw;
+  opacity: 0.07;
+  font-family: "Lato";
+  font-weight: 100;
+}
+#parallax__cont_15 .parallax__item:nth-child(even) .parallax__item__num {
+  left: auto;
+  right: -5vw;
+}
+#parallax__cont_15 .parallax__item__title {
+  padding-bottom: 5px;
+  font-weight: 400;
+}
+#parallax__cont_15 .parallax__item__imgWrap {
+  width: 100%;
+  padding-bottom: 56.25%;
+  background: #000;
+  position: relative;
+  overflow: hidden;
+}
+#parallax__cont_15 .parallax__item__img {
+  position: absolute;
+  left: -5%;
+  top: -5%;
+  width: 110%;
+  height: 110%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  filter: saturate(0%);
+  transition: all 1s;
+}
+#parallax__cont_15 #parallax__cont_15 .parallax__item__img:hover {
+  filter: saturate(100%);
+  transform: scale(1.025);
+}
+#parallax__cont_15 #section1 .parallax__item__img {
+  background-image: url(./imgs/images01@2.jpg);
+}
+#parallax__cont_15 #section2 .parallax__item__img {
+  background-image: url(./imgs/images02@2.jpg);
+}
+#parallax__cont_15 #section3 .parallax__item__img {
+  background-image: url(./imgs/images03@2.jpg);
+}
+#parallax__cont_15 #section4 .parallax__item__img {
+  background-image: url(./imgs/images04@2.jpg);
+}
+#parallax__cont_15 #section5 .parallax__item__img {
+  background-image: url(./imgs/images05@2.jpg);
+}
+#parallax__cont_15 #section6 .parallax__item__img {
+  background-image: url(./imgs/images06@2.jpg);
+}
+#parallax__cont_15 #section7 .parallax__item__img {
+  background-image: url(./imgs/images07@2.jpg);
+}
+#parallax__cont_15 #section8 .parallax__item__img {
+  background-image: url(./imgs/images08@2.jpg);
+}
+#parallax__cont_15 #section9 .parallax__item__img {
+  background-image: url(./imgs/images09@2.jpg);
+}
+#parallax__cont_15 .parallax__item__desc {
+  font-size: 4vw;
+  line-height: 1.4;
+  margin-top: -5vw;
+  margin-left: -4vw;
+  z-index: 100;
+  position: relative;
+  word-break: keep-all;
+}
+#parallax__cont_15 .parallax__item:nth-child(even) .parallax__item__desc {
+  margin-left: auto;
+  margin-right: -4vw;
+}

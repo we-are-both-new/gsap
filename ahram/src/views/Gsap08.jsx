@@ -1,18 +1,21 @@
 /* eslint-disable no-unused-vars */
-import React, { useEffect } from "react";
-import "./gsap08.css";
+import React, { useEffect, useLayoutEffect } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Gsap08() {
-  useEffect(() => {
-    gsap.to("progress", {
-      value: 100,
-      ease: "none",
-      scrollTrigger: { scrub: 0.3 },
+  useLayoutEffect(() => {
+    let ctx = gsap.context(() => {
+      gsap.to("progress", {
+        value: 100,
+        ease: "none",
+        scrollTrigger: { scrub: 0.3 },
+      });
     });
+
+    return () => ctx.revert();
   });
 
   return (
